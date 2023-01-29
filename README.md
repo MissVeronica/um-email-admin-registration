@@ -9,7 +9,7 @@ Click the checkbox to deactivate the WP Registration Notification Email to Admin
 #### 3. UM Administration Registration Form ID
 Design an UM Registration Form for updating the WP All Users "Info" popup and the email placeholder {submitted_registration} with the WP Form fields.
 ### Email Template
-Edit the new email template "Profile Created by Admin Email" with required placeholders and text depending on your site's setup for new UM users.
+Edit the new email template "Profile Created by Admin Email" with required placeholders and text depending on your site's setup for new UM users. You can also use one of the existing UM email template files and move this UM file to your active Theme's folder .../ultimate-member/email/ and change the file name to  "notification_admin_registration_email.php". If you have edited some of the UM email template files you will find those files in the .../ultimate-member/email/ folder.
 ## Installation
 1. Download the zip file and install as a WP Plugin, activate the plugin.
 2. Move the plugin's email template file "notification_admin_registration_email.php" to your active Theme's folder .../ultimate-member/email/
