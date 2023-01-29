@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:     Ultimate Member - Notification Email Admin Registration
- * Description:     Extension to Ultimate Member to replace WP new user email with an UM Notification email when Admin is doing the Registration.
+ * Description:     Extension to Ultimate Member to replace the WP new user email with an UM Notification email when Admin is doing the User Registration.
  * Version:         1.0.0 
  * Requires PHP:    7.4
  * Author:          Miss Veronica
