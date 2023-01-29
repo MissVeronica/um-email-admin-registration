@@ -17,4 +17,4 @@ If you have edited some of the UM email template files you will find those files
 ## Installation
 1. Download the zip file and install as a WP Plugin, activate the plugin.
 2. Move the plugin's email template file "notification_admin_registration_email.php" to your active Theme's folder .../ultimate-member/email/
-3. Read guide https://docs.ultimatemember.com/article/1335-email-templates
+3. Read the guide about custom email templates https://docs.ultimatemember.com/article/1335-email-templates
