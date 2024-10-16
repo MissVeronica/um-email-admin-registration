@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Ultimate Member - Admin User Registration Notification Email
  * Description:     Extension to Ultimate Member to replace the WP new user email with an UM Notification email when Admin is doing the User Registration.
- * Version:         2.0.0
+ * Version:         2.0.1
  * Requires PHP:    7.4
  * Author:          Miss Veronica
  * License:         GPL v2 or later
@@ -54,6 +54,9 @@ class UM_Admin_Registration_Notification_Email {
         um_fetch_user( $user->ID );
         $args = array();
 
+        add_filter( 'um_template_tags_patterns_hook', array( UM()->mail(), 'add_placeholder' ) );
+        add_filter( 'um_template_tags_replaces_hook', array( UM()->mail(), 'add_replace_placeholder' ) );
+
         $subject = apply_filters( 'um_email_send_subject', UM()->options()->get( $template . '_sub' ), $template );
         $subject = wp_unslash( um_convert_tags( $subject , $args ) );
         $subject = html_entity_decode( $subject, ENT_QUOTES, 'UTF-8' );
@@ -82,7 +85,6 @@ class UM_Admin_Registration_Notification_Email {
             $submitted['last_name']  = $args['last_name'];
             $submitted['url']        = $args['url'];
             $submitted['role']       = $args['role'];
-            $submitted['um_role']    = $args['um_role'];
             $submitted['createuser'] = $args['createuser'];
 
             update_user_meta( $user_id, 'submitted', $submitted );
@@ -154,9 +156,9 @@ class UM_Admin_Registration_Notification_Email {
                                         'title'			 => esc_html__( 'Profile Created by Admin Email', 'ultimate-member' ),
                                         'subject'		 => 'Profile {username} is created by Admin',
                                         'body'			 => '',
-                                        'description'	         => esc_html__( 'To send a custom email to the user when profile is created by the site Administrator', 'ultimate-member' ),
+                                        'description'    => esc_html__( 'To send a custom email to the user when profile is created by the site Administrator', 'ultimate-member' ),
                                         'recipient'		 => 'user',
-                                        'default_active'         => true
+                                        'default_active' => true
                                     )
                             );
 
@@ -196,4 +198,3 @@ class UM_Admin_Registration_Notification_Email {
 
 
 new UM_Admin_Registration_Notification_Email();
-
