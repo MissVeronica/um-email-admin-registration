@@ -16,9 +16,11 @@ Tick to deactivate the short WP Registration Notification Email to Admin.
 
 ## Updates
 1. Version 2.0.0 Redesign of the plugin and code improvements.
+2. Version 2.0.1 Issue with email placeholders solved
 
 ## Reference
 1. Admin User Registrations - https://github.com/MissVeronica/um-admin-user-registrations
+2. Email placeholders - https://docs.ultimatemember.com/article/1340-placeholders-for-email-templates
 
 ## Installation and Updates
 1. Install and update by downloading the plugin ZIP file via the green "Code" button
