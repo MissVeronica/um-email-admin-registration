@@ -7,9 +7,8 @@ Select the UM Notification Email to send to the User when Admin is doing the Use
 #### 2. WP Registration Notification Email to Admin
 Tick to deactivate the short WP Registration Notification Email to Admin.
 #### 3. UM Administration Registration Profile Form
-Design an UM Registration Form for updating the WP All Users "Info" popup. Disable the update use "No Profile form".
-
-If you have edited some of the UM email template files you will find those files in the .../ultimate-member/email/ folder.
+1. Design an UM Registration Form for updating the WP All Users "Info" popup. Disable the update use "No Registration Form".
+2. The Registration form should contain these fields: "user_login, email, first_name, last_name, url, role, um_role, createuser" which are returned by the WP Registration.
 
 ## Updates
 1. Version 2.0.0 Redesign of the plugin and code improvements.
