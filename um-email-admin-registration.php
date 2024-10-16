@@ -119,7 +119,7 @@ class UM_Admin_Registration_Notification_Email {
                                                     'post_status' => 'publish'
                                                 ));
 
-            $profile_forms['0000'] = esc_html__( 'No Profile form', 'ultimate-member' );
+            $profile_forms['0000'] = esc_html__( 'No Registration Form', 'ultimate-member' );
             foreach( $um_profile_forms as $um_form ) {
                 $profile_forms[$um_form->ID] = $um_form->post_title;
             }
@@ -137,7 +137,7 @@ class UM_Admin_Registration_Notification_Email {
                             'type'           => 'select',
                             'size'           => 'small',
                             'options'        => $profile_forms,
-                            'label'          => esc_html__( 'UM Administration Registration Profile Form', 'ultimate-member' ),
+                            'label'          => esc_html__( 'UM Administration Registration Form', 'ultimate-member' ),
                             'description'    => esc_html__( 'Design an UM Registration Form for updating the WP All Users "Info" popup. Disable the update use "No Profile form".', 'ultimate-member' ),
                             'conditional'    => array( $this->slug . '_on', '=', 1 ),
                         );
@@ -154,9 +154,9 @@ class UM_Admin_Registration_Notification_Email {
                                         'title'			 => esc_html__( 'Profile Created by Admin Email', 'ultimate-member' ),
                                         'subject'		 => 'Profile {username} is created by Admin',
                                         'body'			 => '',
-                                        'description'	 => esc_html__( 'To send a custom email to the user when profile is created by the site Administrator', 'ultimate-member' ),
+                                        'description'	         => esc_html__( 'To send a custom email to the user when profile is created by the site Administrator', 'ultimate-member' ),
                                         'recipient'		 => 'user',
-                                        'default_active' => true
+                                        'default_active'         => true
                                     )
                             );
 
