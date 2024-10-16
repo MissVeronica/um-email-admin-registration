@@ -10,6 +10,10 @@ Tick to deactivate the short WP Registration Notification Email to Admin.
 1. Design an UM Registration Form for updating the WP All Users "Info" popup. Disable the update use "No Registration Form".
 2. The Registration form should contain these fields: "user_login, email, first_name, last_name, url, role, um_role, createuser" which are returned by the WP Registration.
 
+## Translations or Text changes
+1. Use the "Say What?" plugin with text domain ultimate-member
+2. https://wordpress.org/plugins/say-what/
+
 ## Updates
 1. Version 2.0.0 Redesign of the plugin and code improvements.
 
