@@ -1,7 +1,7 @@
 # UM Admin User Registration Notification Email
 Extension to Ultimate Member to replace the WP new user email with an UM Notification email when Admin is doing the User Registration.
 
-## UM Settings -> Email
+## UM Settings -> Email -> Profile Created by Admin Email
 #### 1. Profile Created by Admin Email
 Select the UM Notification Email to send to the User when Admin is doing the User Registration.
 #### 2. WP Registration Notification Email to Admin
