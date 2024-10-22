@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Ultimate Member - Admin User Registration Notification Email
  * Description:     Extension to Ultimate Member to replace the WP new user email with an UM Notification email when Admin is doing the User Registration.
- * Version:         2.0.1
+ * Version:         2.0.2
  * Requires PHP:    7.4
  * Author:          Miss Veronica
  * License:         GPL v2 or later
@@ -12,7 +12,7 @@
  * Update URI:      https://github.com/MissVeronica/um-email-admin-registration
  * Text Domain:     ultimate-member
  * Domain Path:     /languages
- * UM version:      2.8.8
+ * UM version:      2.8.9
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -140,7 +140,7 @@ class UM_Admin_Registration_Notification_Email {
                             'size'           => 'small',
                             'options'        => $profile_forms,
                             'label'          => esc_html__( 'UM Administration Registration Form', 'ultimate-member' ),
-                            'description'    => esc_html__( 'Design an UM Registration Form for updating the WP All Users "Info" popup. Disable the update use "No Profile form".', 'ultimate-member' ),
+                            'description'    => esc_html__( 'Design an UM Registration Form for updating the WP All Users "Info" popup. Disable the update use "No Registration Form".', 'ultimate-member' ),
                             'conditional'    => array( $this->slug . '_on', '=', 1 ),
                         );
         }
@@ -164,13 +164,13 @@ class UM_Admin_Registration_Notification_Email {
 
         if ( UM()->options()->get( $this->slug . '_on' ) === '' ) {
 
-            $email_on = empty( $custom_email['default_active'] ) ? 0 : 1;
+            $email_on = empty( $custom_email[$this->slug]['default_active'] ) ? 0 : 1;
             UM()->options()->update( $this->slug . '_on', $email_on );
         }
 
         if ( UM()->options()->get( $this->slug . '_sub' ) === '' ) {
 
-            UM()->options()->update( $this->slug . '_sub', $custom_email['subject'] );
+            UM()->options()->update( $this->slug . '_sub', $custom_email[$this->slug]['subject'] );
         }        
     
         $located = UM()->mail()->locate_template( $this->slug );
